@@ -8,9 +8,16 @@
       font-family: Arial, sans-serif;
     }
     
+    .input-container {
+      display: flex;
+      align-items: center;
+    }	
     .dropdown {
-      width: 200px;
+	  display: flex;	
+	  align-items: center;
+      width: 600px;
       margin: 20px auto;
+	  align: center;
     }
     
     .dropdown select,
@@ -34,6 +41,9 @@
       cursor: pointer;
       margin-top: 10px;
     }
+	
+	.add_clear_buttons {
+	}
     
     table {
       width: 600px;
@@ -79,11 +89,11 @@
 </head>
 <body>
   <h1>LBS - Leaner, Bigger, Stronger</h1>
-
+	
   <div class="dropdown">
     <input type="date" id="dateInput">
     <select id="weekSelect" onchange="enableFields()">
-      <option value="">Selecciona una semana</option>
+      <option value="">Semana</option>
       <option value="Semana 1">Semana 1</option>
       <option value="Semana 2">Semana 2</option>
       <option value="Semana 3">Semana 3</option>
@@ -94,7 +104,7 @@
       <option value="Semana 8">Semana 8</option>
     </select>
     <select id="exerciseSelect" onchange="enableFields()">
-      <option value="">Selecciona un ejercicio</option>
+      <option value="">Ejercicio</option>
       <option value="Barbell Bench Press">Barbell Bench Press</option>
       <option value="Incline Barbell Bench Press">Incline Barbell Bench Press</option>
       <option value="Dumbbell Bench Press">Dumbbell Bench Press</option>
@@ -117,7 +127,10 @@
       <option value="Dumbbell Hammer Curl">Dumbbell Hammer Curl</option>
       <option value="Captain's Chair Leg Raise">Captain's Chair Leg Raise</option>
     </select>
-    <input type="text" id="weightInput" placeholder="Ingrese el peso" pattern="[0-9]+" disabled>
+	<input type="text" id="weightInput" placeholder="Libras" pattern="[0-9]+" disabled>
+  </div>
+  
+  <div class="dropdown">	
     <button onclick="addExercise()">Add</button>
     <button onclick="clearTable()">Clear Data</button>
   </div>
